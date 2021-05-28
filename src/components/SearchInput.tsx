@@ -34,18 +34,18 @@ const SearchInput = ({ title }: SearchInputProps) => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar fixed="bottom" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">WeatherApp</Navbar.Brand>
+        {/* <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#home">Today</Nav.Link>
           <Nav.Link href="#features">Next Days</Nav.Link>
         </Nav>
-        </Navbar.Collapse>
-        <Form onSubmit={handleSearch} inline>
-          <FormControl onChange={handleInput} type="text" placeholder="Search" className="mr-sm-2" />
-          <Button type="submit" variant="outline-info">Search</Button>
+        </Navbar.Collapse> */}
+        <Form inline onSubmit={handleSearch}>
+          <Form.Control onChange={handleInput} value={city} type="text" placeholder="Search" className="mr-sm-2" />
         </Form>
+          <Button type="submit" variant="outline-info">Search</Button>
       </Navbar>
     </>
   );

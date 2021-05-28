@@ -14,7 +14,7 @@ const Home = ({ data }: WeatherProps) => {
 
   return (
     <>
-      <Container fluid>
+      <Container className="text-center p-3">
         <Row>
           <Col md={{ span: 8, offset: 2 }}>
             <Jumbotron fluid>
